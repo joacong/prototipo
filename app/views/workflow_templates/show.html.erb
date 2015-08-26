@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @workflow_template.name %>
+</p>
+
+<p>
+  <strong>Workflow template:</strong>
+  <%= @workflow_template.workflow_template %>
+</p>
+
+<%= link_to 'Edit', edit_workflow_template_path(@workflow_template) %> |
+<%= link_to 'Back', workflow_templates_path %>
