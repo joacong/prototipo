@@ -1,0 +1,2 @@
+module ActiveWorkflowsHelper
+end
