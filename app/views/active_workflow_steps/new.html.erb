@@ -1,5 +1,6 @@
-<h1>New active_workflow_step</h1>
+<%- model_class = ActiveWorkflowStep -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => ActiveWorkflowStep %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', active_workflow_steps_path %>
