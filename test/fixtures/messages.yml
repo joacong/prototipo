@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  content: MyText
+  active_workflow_step_id: 
+
+two:
+  user_id: 
+  content: MyText
+  active_workflow_step_id: 
