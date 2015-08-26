@@ -29,6 +29,7 @@ class WorflowRequestsController < ApplicationController
   # POST /worflow_requests.json
   def create
     @worflow_request = WorflowRequest.new(worflow_request_params)
+    @worflow_request.user = current_user
 
     respond_to do |format|
       if @worflow_request.save
