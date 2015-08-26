@@ -5,6 +5,13 @@
 
 <div class="fieldset">
   <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:parent) %></dt>
+      <dd><pre class="prettyprint"><%= @company_area.parent_name %></pre></dd>
+  </dl>
+</div>
+
+<div class="fieldset">
+  <dl>
       <dt class="label label-default"><%= model_class.human_attribute_name(:name) %></dt>
       <dd><pre class="prettyprint"><%= @company_area.name %></pre></dd>
   </dl>
