@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company_area.name %>
+</p>
+
+<p>
+  <strong>Company area:</strong>
+  <%= @company_area.company_area %>
+</p>
+
+<%= link_to 'Edit', edit_company_area_path(@company_area) %> |
+<%= link_to 'Back', company_areas_path %>

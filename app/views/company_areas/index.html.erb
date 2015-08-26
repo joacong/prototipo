@@ -1,0 +1,27 @@
+<h1>Listing company_areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Company area</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @company_areas.each do |company_area| %>
+      <tr>
+        <td><%= company_area.name %></td>
+        <td><%= company_area.company_area %></td>
+        <td><%= link_to 'Show', company_area %></td>
+        <td><%= link_to 'Edit', edit_company_area_path(company_area) %></td>
+        <td><%= link_to 'Destroy', company_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company area', new_company_area_path %>
