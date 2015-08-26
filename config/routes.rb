@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :worflow_requests
+
   resources :messages
 
   devise_for :admin_users, ActiveAdmin::Devise.config
