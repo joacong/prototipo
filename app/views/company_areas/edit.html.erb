@@ -1,6 +1,5 @@
-<h1>Editing company_area</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @company_area %> |
-<%= link_to 'Back', company_areas_path %>
+<%- model_class = CompanyArea -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => CompanyArea %></h1>
+</div>
+<%= render :partial => 'form' %>

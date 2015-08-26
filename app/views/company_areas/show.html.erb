@@ -1,14 +1,24 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = CompanyArea -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => CompanyArea %></h1>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @company_area.name %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:name) %></dt>
+      <dd><pre class="prettyprint"><%= @company_area.name %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Company area:</strong>
-  <%= @company_area.company_area %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              company_areas_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_company_area_path(@company_area), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              company_area_path(@company_area),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<%= link_to 'Edit', edit_company_area_path(@company_area) %> |
-<%= link_to 'Back', company_areas_path %>
