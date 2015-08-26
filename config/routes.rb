@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :workflow_template_steps
+
   resources :company_areas
 
   resources :documents
