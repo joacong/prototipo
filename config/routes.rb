@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :roles
+
   resources :worflow_requests
 
   resources :messages
