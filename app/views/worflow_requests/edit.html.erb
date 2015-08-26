@@ -1,6 +1,5 @@
-<h1>Editing worflow_request</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @worflow_request %> |
-<%= link_to 'Back', worflow_requests_path %>
+<%- model_class = WorflowRequest -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => WorflowRequest %></h1>
+</div>
+<%= render :partial => 'form' %>

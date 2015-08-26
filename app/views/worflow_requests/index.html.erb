@@ -1,25 +1,34 @@
-<h1>Listing worflow_requests</h1>
-
-<table>
+<%- model_class = WorflowRequest -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => WorflowRequest %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>User</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @worflow_requests.each do |worflow_request| %>
       <tr>
-        <td><%= worflow_request.user %></td>
-        <td><%= link_to 'Show', worflow_request %></td>
-        <td><%= link_to 'Edit', edit_worflow_request_path(worflow_request) %></td>
-        <td><%= link_to 'Destroy', worflow_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= worflow_request.id %></td>
+        <td><%=l worflow_request.created_at, format: :long %></td>
+        <td>
+          <%= link_to worflow_request_path(worflow_request), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to worflow_request_path(worflow_request), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Worflow request', new_worflow_request_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_worflow_request_path,
+            :class => 'btn btn-primary' %>
