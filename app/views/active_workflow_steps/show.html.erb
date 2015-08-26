@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @active_workflow_step.number %>
+</p>
+
+<p>
+  <strong>Workflow template:</strong>
+  <%= @active_workflow_step.workflow_template %>
+</p>
+
+<p>
+  <strong>Active workflow:</strong>
+  <%= @active_workflow_step.active_workflow %>
+</p>
+
+<%= link_to 'Edit', edit_active_workflow_step_path(@active_workflow_step) %> |
+<%= link_to 'Back', active_workflow_steps_path %>

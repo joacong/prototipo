@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :active_workflow_steps
+
   resources :roles
 
   resources :worflow_requests

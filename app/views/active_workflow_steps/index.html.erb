@@ -1,0 +1,29 @@
+<h1>Listing active_workflow_steps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Workflow template</th>
+      <th>Active workflow</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @active_workflow_steps.each do |active_workflow_step| %>
+      <tr>
+        <td><%= active_workflow_step.number %></td>
+        <td><%= active_workflow_step.workflow_template %></td>
+        <td><%= active_workflow_step.active_workflow %></td>
+        <td><%= link_to 'Show', active_workflow_step %></td>
+        <td><%= link_to 'Edit', edit_active_workflow_step_path(active_workflow_step) %></td>
+        <td><%= link_to 'Destroy', active_workflow_step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Active workflow step', new_active_workflow_step_path %>

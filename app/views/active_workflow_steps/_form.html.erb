@@ -1,0 +1,13 @@
+<%= simple_form_for(@active_workflow_step) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :number %>
+    <%= f.association :workflow_template %>
+    <%= f.association :active_workflow %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
